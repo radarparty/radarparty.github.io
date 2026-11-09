@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#0E1018" />
+    <title>Radar Party</title>
+    <!-- Telegram Mini App: скрипт Telegram грузим только внутри Telegram (в адресе есть tgWebAppData),
+         на обычном сайте он не нужен. Должен загрузиться до приложения — поэтому синхронно, в head. -->
+    <script>
+      (function () {
+        var inTg = /tgWebAppData|tgWebAppPlatform/.test(location.hash + location.search);
+        try { inTg = inTg || !!sessionStorage.getItem('__telegram__initParams'); } catch (e) {}
+        if (inTg) document.write('<script src="https://telegram.org/js/telegram-web-app.js?59"><\/script>');
+      })();
+    </script>
+    <style id="expo-reset">
+      html,
+      body {
+        height: 100%;
+        background: #0E1018;
+      }
+      body {
+        overflow: hidden;
+        overscroll-behavior: none;
+      }
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <meta name="theme-color" content="#0E1018">
+<link rel="icon" href="/favicon.ico"/></head>
+
+  <body>
+    <noscript>Для работы Radar Party включите JavaScript.</noscript>
+    <div id="root"></div>
+  <script src="/_expo/static/js/web/__expo-metro-runtime-8c088df87a31e4e6accd81c554ec290d.js" defer></script><script src="/_expo/static/js/web/__common-92dfcf4db2c6ebca5ccfe684668ded4f.js" defer></script><script src="/_expo/static/js/web/entry-972414bb5deef525c36f820df6409f2e.js" defer></script>
+</body>
+</html>
